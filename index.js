@@ -6,7 +6,7 @@ import projectRouter from "./Routes/project.router.js";
 import fileUpload from "express-fileupload";
 import dotenv from "dotenv";
 import { cloudinaryConfig } from "./config/cloudinary.js";
-
+import cors from cors;
 //loading environment variables
 dotenv.config();
 
@@ -19,6 +19,7 @@ connectDb();
 //global middleware
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 //img file upload
 app.use(fileUpload({useTempFiles:true}));
