@@ -6,7 +6,7 @@ import projectRouter from "./Routes/project.router.js";
 import fileUpload from "express-fileupload";
 import dotenv from "dotenv";
 import { cloudinaryConfig } from "./config/cloudinary.js";
-import cors from cors;
+import cors from "cors";
 //loading environment variables
 dotenv.config();
 
