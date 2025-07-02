@@ -27,13 +27,13 @@ cloudinaryConfig();
 
 
 //Admin routes
-app.use('/api/admin', adminRouter);
+app.use( adminRouter);
 
 //Posts routes
-app.use('/api/posts', blogPostRouter);
+app.use(blogPostRouter);
 
 //Project Routes
-app.use("/api/projects", projectRouter)
+app.use( projectRouter)
 
 
 

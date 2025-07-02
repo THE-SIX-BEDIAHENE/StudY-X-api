@@ -5,20 +5,20 @@ import auth from "../middlewares/auth.js";
 
 const blogPostRouter = Router();
 
+//post a blog
+blogPostRouter.post("/postBlog",auth,createPost);
+
 //return all blog posts
-blogPostRouter.get("/",getAllPosts)
+blogPostRouter.get("/viewBlogs",getAllPosts)
 
 //get a blog by slug
-blogPostRouter.get("/:slug",getPostBySlug)
-
-//post a blog
-blogPostRouter.post("/",auth,createPost);
+blogPostRouter.get("/readBlog/:slug",getPostBySlug)
 
 //update a blog post
-blogPostRouter.patch("/:id",auth, updatePost)
+blogPostRouter.patch("/editBlog/:id",auth, updatePost)
 
 //delete a blog post
-blogPostRouter.delete("/:id",auth, deletePost)
+blogPostRouter.delete("/removeBlog/:id",auth, deletePost)
 
 
 export default blogPostRouter;
