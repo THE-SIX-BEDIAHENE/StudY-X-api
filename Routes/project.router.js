@@ -4,15 +4,16 @@ import auth from "../middlewares/auth.js";
 
 const projectRouter = Router();
 
-projectRouter.get("/",getAllProjects)
 
-projectRouter.get("/:slug", getProjectBySlug)
+projectRouter.post('/newProjects', auth, createProject)
 
-projectRouter.post('/',auth, createProject)
+projectRouter.get("/listProjects", getAllProjects)
 
-projectRouter.patch("/:id",auth,updateProject)
+projectRouter.get("/readMore/:slug", getProjectBySlug)
 
-projectRouter.delete('/:id',auth,deleteProject)
+projectRouter.patch("/editProjects/:id", auth, updateProject)
+
+projectRouter.delete('/removeProject/:id', auth, deleteProject)
 
 
 export default projectRouter;
