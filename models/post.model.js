@@ -8,7 +8,7 @@ const blogPostSchema = mongoose.Schema({
     content:{type:String,required:true},
     imageUrl:{type:String},
     author:{type:String,default:'Admin'},
-    webSiteUrl:{type: String}
+    url:{type: String}
 },{timestamps:true});
 
 blogPostSchema.plugin(normalize)
