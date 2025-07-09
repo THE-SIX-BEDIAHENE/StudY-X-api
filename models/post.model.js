@@ -3,13 +3,13 @@ import mongoose from 'mongoose';
 import normalize from 'normalize-mongoose'
 
 const blogPostSchema = mongoose.Schema({
-    title:{ type:String,required:true},
-    slug:{type:String,required:true,unique:true},
-    content:{type:String,required:true},
-    imageUrl:{type:String},
-    author:{type:String,default:'Admin'},
-    url:{type: String}
-},{timestamps:true});
+    title: { type: String, required: true },
+    slug: { type: String, required: true, unique: true },
+    content: { type: String, required: true },
+    imageUrl: { type: String },
+    author: { type: String, default: 'Admin' },
+    url: { type: String }
+}, { timestamps: true });
 
 blogPostSchema.plugin(normalize)
 
