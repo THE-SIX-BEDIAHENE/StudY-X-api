@@ -1,3 +1,4 @@
+import { string } from 'joi';
 import mongoose from 'mongoose';
 import normalize from 'normalize-mongoose'
 
@@ -6,7 +7,8 @@ const blogPostSchema = mongoose.Schema({
     slug:{type:String,required:true,unique:true},
     content:{type:String,required:true},
     imageUrl:{type:String},
-    author:{type:String,default:'Admin'}
+    author:{type:String,default:'Admin'},
+    webSiteUrl:{type: String}
 },{timestamps:true});
 
 blogPostSchema.plugin(normalize)
