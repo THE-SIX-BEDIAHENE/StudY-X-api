@@ -16,13 +16,7 @@ const projectSchema = mongoose.Schema({
         type:String,
         required:true,
     },
-    imageUrl:{
-        type:String,
-    },
-    // author:{
-    //     type:String,
-    //     default:'Admin'
-    // },
+    imageUrl:{type: [String]}
 },{timestamps:true})
 
 projectSchema.plugin(normalize)
