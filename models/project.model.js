@@ -16,7 +16,7 @@ const projectSchema = mongoose.Schema({
         type:String,
         required:true,
     },
-    imageUrl:{type: [String]}
+    imageUrl:{type: String}
 },{timestamps:true})
 
 projectSchema.plugin(normalize)
